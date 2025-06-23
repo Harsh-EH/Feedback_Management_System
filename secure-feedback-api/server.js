@@ -1,0 +1,126 @@
+// // const express = require('express');
+// // const dotenv = require('dotenv');
+// // const connectDB = require('./config/db');
+// // const feedbackRoutes = require('./routes/feedbackRoutes');
+// // const authRoutes = require('./routes/authRoutes');
+// // const errorHandler = require('./middleware/errorHandler');
+// // const cors = require('cors');
+
+// // // Load env variables from .env file
+// // dotenv.config();
+
+// // // Connect to MongoDB
+// // connectDB();
+
+// // // Initialize Express app (✅ moved here before app.use)
+// // const app = express();
+
+// // // Enable CORS
+// // app.use(cors({
+// //   origin: 'https://feedback-management-system-kappa.vercel.app', 
+// //   credentials: true
+// // }));
+
+// // // Middleware to parse JSON body
+// // app.use(express.json());
+
+// // // Mount routes
+// // app.use('/api/feedback', feedbackRoutes);
+// // app.use('/api/auth', authRoutes);
+
+// // // Error handling middleware
+// // console.log("typeof errorHandler:", typeof errorHandler);
+// // app.use(errorHandler);
+// // app.get('/', (req, res) => {
+// //   res.send('✅ Feedback Management API is running!');
+// // });
+
+// // // Start server
+// // const PORT = process.env.PORT || 5000;
+// // app.listen(PORT, () => {
+// //   console.log(`Server running on port ${PORT}`);
+// // });
+
+
+// const express = require('express');
+// const dotenv = require('dotenv');
+// const connectDB = require('./config/db');
+// const feedbackRoutes = require('./routes/feedbackRoutes');
+// const authRoutes = require('./routes/authRoutes');
+// const errorHandler = require('./middleware/errorHandler');
+// const cors = require('cors');
+
+// dotenv.config();
+// connectDB();
+
+// const app = express();
+
+// app.use(cors({
+//   origin: 'https://feedback-management-system-kappa.vercel.app', // 🔁 Replace with your deployed frontend domain
+//   credentials: true
+// }));
+
+// app.use(express.json());
+
+// app.use('/api/feedback', feedbackRoutes);
+// app.use('/api/auth', authRoutes);
+
+// app.get('/', (req, res) => {
+//   res.send('✅ Feedback Management API is running!');
+// });
+
+// app.use(errorHandler);
+
+// const PORT = process.env.PORT || 5000;
+// app.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
+
+
+const express = require('express');
+const dotenv = require('dotenv');
+const connectDB = require('./config/db');
+const feedbackRoutes = require('./routes/feedbackRoutes');
+const authRoutes = require('./routes/authRoutes');
+const errorHandler = require('./middleware/errorHandler');
+const cors = require('cors');
+
+// Load env variables from .env file
+dotenv.config();
+
+// Connect to MongoDB
+connectDB();
+
+// Initialize Express app
+const app = express();
+
+// ✅ Configure CORS to allow your frontend
+const corsOptions = {
+  origin: 'https://feedback-management-system-n1hs-2kr5z0fds.vercel.app', // Replace with your exact frontend domain
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
+
+// Middleware to parse JSON body
+app.use(express.json());
+
+// Mount routes
+app.use('/feedback', feedbackRoutes);
+app.use('/auth', authRoutes);
+
+// Health check route (for Render browser test)
+app.get('/', (req, res) => {
+  res.send('✅ Feedback Management API is running!');
+});
+
+// Error handler
+app.use(errorHandler);
+
+// Start server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
