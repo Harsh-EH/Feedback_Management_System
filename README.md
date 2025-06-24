@@ -1,113 +1,142 @@
-# 🛡️ Secure Feedback API – Mini Project
+# 💬 Feedback Management System
 
-## 🎯 Objective
-
-A secure, full-stack feedback management system where users can submit feedback and an admin can view and manage it. This system demonstrates the use of **RESTful APIs**, **MongoDB integration**, **JWT authentication**, and **secure backend development**.
+A secure, full-stack Feedback Management System where users can submit feedback and administrators can securely manage submissions. Built with **Node.js**, **Express**, **MongoDB**, and **React.js**, it ensures secure handling of data with JWT authentication and bcrypt encryption.
 
 ---
 
-## 🧑‍💻 Tech Stack
+## 🚀 Live Demo
 
-- **Backend:** Node.js, Express.js
-- **Frontend:** React.js
-- **Database:** MongoDB (Mongoose ODM)
-- **Authentication:** JWT, bcrypt
-- **Testing Tool:** Postman
-- **Deployment:** Render (API), Vercel/Netlify (Frontend)
+- 🔗 **Frontend**: [feedback-management-system-kappa.vercel.app](https://feedback-management-system-kappa.vercel.app)  
+- 🔗 **Backend**: [feedback-management-system-tnca.onrender.com](https://feedback-management-system-tnca.onrender.com)  
+- 🔐 **Admin Login**: [/admin/login](https://feedback-management-system-kappa.vercel.app/admin/login)  
+- 📝 **User Feedback Form**: [/feedback](https://feedback-management-system-kappa.vercel.app/feedback)
 
 ---
 
-## 🗂️ Folder Structure
+## 🧪 Tech Stack
 
+**Backend**:  
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)  
+![Express](https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white)  
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)  
+![JWT](https://img.shields.io/badge/JWT-000000?logo=jsonwebtokens&logoColor=white)  
+![bcrypt](https://img.shields.io/badge/bcrypt-003A70?style=flat&logo=bcrypt&logoColor=white)
+
+**Frontend**:  
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)  
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white)
+
+**DevOps & Tools**:  
+![Render](https://img.shields.io/badge/Backend-Hosted%20on%20Render-green)  
+![Vercel](https://img.shields.io/badge/Frontend-Hosted%20on%20Vercel-black)  
+![Postman](https://img.shields.io/badge/Tested%20With-Postman-orange)
+
+---
+
+## 💡 Features
+
+- ✅ **User Feedback Form** (Name, Email, Message, Rating 1–5)
+- ✅ **Secure Admin Login** with JWT authentication
+- ✅ **Admin Dashboard** to view and delete feedbacks
+- ✅ **Password Encryption** using bcrypt
+- ✅ **Protected Routes** for administrative actions
+- ✅ **Robust Error Handling** and input validation
+- ✅ **Environment Configuration** using `dotenv`
+- ✅ **Fully Deployed** using Render (API) and Vercel (Frontend)
+
+---
+
+## 📁 Project Structure
+
+```bash
+/feedback-management-system
+├── secure-feedback-api/         # Backend (Node + Express + MongoDB)
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── .env.example
+│   └── server.js
+├── secure-feedback-client/      # Frontend (React + Bootstrap)
+│   ├── components/
+│   ├── pages/
+│   └── App.js
+└── README.md
 ```
-Secure_Feedback_API_Mini-Project/
-│
-├── secure-feedback-api/       ← Backend API (Node.js + Express)
-└── secure-feedback-client/    ← Frontend (React.js)
-```
 
 ---
 
-## 🚀 Getting Started
+## ⚙️ Setup Instructions
 
-### ⚙️ Backend Setup
+### 1. Prerequisites
+
+- Node.js & npm
+- MongoDB Atlas (or local instance)
+- Git
+
+### 2. Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/feedback-management-system.git
+cd feedback-management-system
+```
+
+### 3. Backend Setup (`secure-feedback-api`)
 
 ```bash
 cd secure-feedback-api
 npm install
+
+# Create a .env file using .env.example
 cp .env.example .env
-# Edit .env and add your Mongo URI and JWT secret
-node server.js
+
+# Start the backend server
+npm start
 ```
 
----
-
-### 🌐 Frontend Setup
+### 4. Frontend Setup (`secure-feedback-client`)
 
 ```bash
-cd secure-feedback-client
+cd ../secure-feedback-client
 npm install
+
+# Start the React frontend
 npm start
 ```
 
 ---
 
-## 📦 .env.example (Backend)
+## 📡 API Endpoints
 
-Create a `.env` file in `secure-feedback-api/` like this:
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-```
-
----
-
-## 📮 API Endpoints
-
-### ✅ USER ROUTES
-
-| Method | Route            | Description                      |
-|--------|------------------|----------------------------------|
-| POST   | /api/feedback     | Submit feedback (public)         |
-
-### 🔐 ADMIN ROUTES (JWT Protected)
-
-| Method | Route                       | Description                  |
-|--------|-----------------------------|------------------------------|
-| POST   | /api/auth/login             | Admin login                  |
-| GET    | /api/feedback/admin         | Get all feedback             |
-| GET    | /api/feedback/:id           | Get single feedback by ID    |
-| DELETE | /api/feedback/:id           | Delete feedback by ID        |
+| Method | Route                      | Access      | Description                        |
+|--------|----------------------------|-------------|------------------------------------|
+| POST   | `/api/feedback`            | Public      | Submit feedback                    |
+| GET    | `/api/feedback`            | Admin Only  | Get all feedback                   |
+| DELETE | `/api/feedback/:id`        | Admin Only  | Delete feedback by ID              |
+| POST   | `/api/admin/login`         | Public      | Admin login (returns JWT)          |
 
 ---
 
-## 🧪 Postman Collection
+## 🖼️ Screenshots
 
-Test the API using Postman. Import this file:
+> _You can replace these with actual images later._
 
-📁 `SecureFeedback.postman_collection.json` (Add your exported collection here)
-
----
-
-## 🔐 Security
-
-- All sensitive routes are protected using **JWT**.
-- Admin passwords are **hashed using bcrypt**.
-- Environment secrets are handled using **dotenv**.
+- 📥 User Feedback Page (Form UI)
+- 🔐 Admin Login Page
+- 🗂️ Admin Dashboard (Feedback list with delete)
 
 ---
 
-## 🚀 Deployment
+## 📜 License
 
-- Backend hosted on [Render](https://render.com)
-- Frontend hosted on [Vercel](https://vercel.com) or [Netlify](https://netlify.com)
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 👨‍💻 Author
+## 🙏 Acknowledgements
 
-**Harsh Kasana**  
-📧 harshkasana94@gmail.com  
-🔗 [LinkedIn](https://linkedin.com/in/harsh-kasana-0328b030a) | [GitHub](https://github.com/Harsh-EH)
+- Bootstrap for styling
+- MongoDB Atlas for free cloud DB
+- Render & Vercel for deployment
+- [jwt.io](https://jwt.io/) and bcrypt.js for secure authentication
