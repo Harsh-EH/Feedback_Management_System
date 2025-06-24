@@ -136,7 +136,9 @@ This project is licensed under the [MIT License](LICENSE).
 - Render & Vercel for deployment
 - [jwt.io](https://jwt.io/) and bcrypt.js for secure authentication
 
-👨‍💻 Author
+---
+
+## 👨‍💻 Author
  - Harsh Kasana
  - 📧 [Mail](harshkasana94@gmail.com)
  - 🔗 [LinkedIn](https://www.linkedin.com/in/harsh-kasana-0328b030a/) | [GitHub](https://github.com/Harsh-EH)
