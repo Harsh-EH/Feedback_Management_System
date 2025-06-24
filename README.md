@@ -21,11 +21,9 @@ A secure, full-stack Feedback Management System where users can submit feedback 
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)  
 ![JWT](https://img.shields.io/badge/JWT-000000?logo=jsonwebtokens&logoColor=white)  
 ![bcrypt](https://img.shields.io/badge/bcrypt-003A70?style=flat&logo=bcrypt&logoColor=white)
-
 **Frontend**:  
 ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)  
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white)
-
 **DevOps & Tools**:  
 ![Render](https://img.shields.io/badge/Backend-Hosted%20on%20Render-green)  
 ![Vercel](https://img.shields.io/badge/Frontend-Hosted%20on%20Vercel-black)  

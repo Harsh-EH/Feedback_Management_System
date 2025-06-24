@@ -1,14 +1,3 @@
-// import LoginForm from '../components/LoginForm';
-
-// export default function LoginPage() {
-//   return (
-//     <div>
-//       <h2>Admin Login</h2>
-//       <LoginForm />
-//     </div>
-//   );
-// }
-
 import React, { useState } from 'react';
 import API from '../api';
 import { useNavigate } from 'react-router-dom';
