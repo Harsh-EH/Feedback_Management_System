@@ -5,11 +5,10 @@ A secure, full-stack Feedback Management System where users can submit feedback 
 ---
 
 ## 🚀 Live Demo
-
-- 🔗 **Frontend**: [feedback-management-system-kappa.vercel.app](https://feedback-management-system-kappa.vercel.app)  
+  
 - 🔗 **Backend**: [feedback-management-system-tnca.onrender.com](https://feedback-management-system-tnca.onrender.com)  
-- 🔐 **Admin Login**: [/admin/login](https://feedback-management-system-kappa.vercel.app/admin/login)  
-- 📝 **User Feedback Form**: [/feedback](https://feedback-management-system-kappa.vercel.app/feedback)
+- 🔐 **Admin Login**: [/admin/login](https://feedback-management-system-two.vercel.app/admin/login)  
+- 📝 **User Feedback Form**: [/feedback](https://feedback-management-system-two.vercel.app/feedback)
 
 ---
 
@@ -110,7 +109,7 @@ npm start
 | Method | Route                      | Access      | Description                        |
 |--------|----------------------------|-------------|------------------------------------|
 | POST   | `/api/feedback`            | Public      | Submit feedback                    |
-| GET    | `/api/feedback`            | Admin Only  | Get all feedback                   |
+| GET    | `/api/admin/feedback`            | Admin Only  | Get all feedback                   |
 | DELETE | `/api/feedback/:id`        | Admin Only  | Delete feedback by ID              |
 | POST   | `/api/admin/login`         | Public      | Admin login (returns JWT)          |
 
@@ -138,6 +137,6 @@ This project is licensed under the [MIT License](LICENSE).
 - [jwt.io](https://jwt.io/) and bcrypt.js for secure authentication
 
 👨‍💻 Author
-Harsh Kasana
-📧 [Mail](harshkasana94@gmail.com)
-🔗 [LinkedIn](https://www.linkedin.com/in/harsh-kasana-0328b030a/) | [GitHub](https://github.com/Harsh-EH)
+ - Harsh Kasana
+ - 📧 [Mail](harshkasana94@gmail.com)
+ - 🔗 [LinkedIn](https://www.linkedin.com/in/harsh-kasana-0328b030a/) | [GitHub](https://github.com/Harsh-EH)

@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "128dbd97-86b6-400a-9913-b39463c061d3",
-		"name": "Feedback Management System",
+		"name": "Feedback Management System (Locally)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "41706427"
 	},
