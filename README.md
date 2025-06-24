@@ -101,7 +101,10 @@ npm install
 # Start the React frontend
 npm start
 ```
-
+---
+## Admin Credentials
+ - Username: admin
+ - Password: admin123
 ---
 
 ## 📡 API Endpoints
