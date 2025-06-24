@@ -95,7 +95,7 @@ connectDB();
 const app = express();
 
 const corsOptions = {
-  origin: 'https://feedback-management-system-lxq3yhd7o.vercel.app', // ✅ Local frontend
+  origin: 'https://feedback-management-system-two.vercel.app/', // ✅ Local frontend
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
