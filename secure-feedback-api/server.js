@@ -94,9 +94,8 @@ connectDB();
 // Initialize Express app
 const app = express();
 
-// ✅ Configure CORS to allow your frontend
 const corsOptions = {
-  origin: 'https://feedback-management-system-n1hs-2kr5z0fds.vercel.app', // Replace with your exact frontend domain
+  origin: 'http://localhost:3000', // ✅ Local frontend
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
@@ -108,8 +107,8 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 // Mount routes
-app.use('/feedback', feedbackRoutes);
-app.use('/auth', authRoutes);
+app.use('/api/feedback', feedbackRoutes);
+app.use('/api/auth', authRoutes);
 
 // Health check route (for Render browser test)
 app.get('/', (req, res) => {
