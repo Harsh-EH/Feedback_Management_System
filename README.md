@@ -120,11 +120,9 @@ npm start
 
 ## 🖼️ Screenshots
 
-> _You can replace these with actual images later._
-
-- 📥 User Feedback Page (Form UI)
-- 🔐 Admin Login Page
-- 🗂️ Admin Dashboard (Feedback list with delete)
+- [📥 User Feedback Page (Form UI)!](image-2.png)
+- [🔐 Admin Login Page!](image.png)
+- [🗂️ Admin Dashboard (Feedback list with delete)!](image-1.png)
 
 ---
 
@@ -140,3 +138,8 @@ This project is licensed under the [MIT License](LICENSE).
 - MongoDB Atlas for free cloud DB
 - Render & Vercel for deployment
 - [jwt.io](https://jwt.io/) and bcrypt.js for secure authentication
+
+👨‍💻 Author
+Harsh Kasana
+📧 [Mail](harshkasana94@gmail.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/harsh-kasana-0328b030a/) | [GitHub](https://github.com/Harsh-EH)
